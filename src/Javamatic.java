@@ -1,5 +1,6 @@
 /**
  * Created by eunsangg10 on 11/7/18.
+ * Run Javamatic Machine
  */
 
 
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class Javamatic {
     /**
      * Entry point for the program
-     * @param args
+     * @param args arguments(will not be used for the program)
      */
     public static void main(String[] args) {
         // Set up dispenser through setup method

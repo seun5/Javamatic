@@ -6,51 +6,56 @@
 
 import java.util.*;
 
-public class Drink implements Comparable<Drink>{
+public class Drink implements Comparable<Drink> {
     private String name;
-    private HashMap<Ingredient,Integer> ingredients;
+    private HashMap<Ingredient, Integer> ingredients;
 
     /**
-     * Consturctor for Drink
+     * Constructor for Drink
+     *
      * @param name of the drink
      */
-    public Drink(String name){
+    public Drink(String name) {
         this.name = name;
         this.ingredients = new HashMap<Ingredient, Integer>();
     }
 
     /**
      * Returns name of the drink
+     *
      * @return name of the drink
      */
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     /**
      * return
+     *
      * @return map of ingredients
      */
-    public HashMap getIngredients(){
+    public HashMap getIngredients() {
         return ingredients;
     }
 
     /**
      * Add new ingredient to the recipe
+     *
      * @param ingredient New Ingredient
-     * @param amount  Amount need in the recipe
+     * @param amount     Amount need in the recipe
      */
-    public void addIngredient(Ingredient ingredient, int amount){
+    public void addIngredient(Ingredient ingredient, int amount) {
         ingredients.put(ingredient, amount);
     }
 
     /**
      * Return the total cost of the drink
+     *
      * @return price of the drink
      */
-    public double getPrice(){
+    public double getPrice() {
         double price = 0;
-        for(Ingredient i: ingredients.keySet()){
+        for (Ingredient i : ingredients.keySet()) {
             price += i.getCost() * ingredients.get(i);
         }
         return price;
@@ -58,15 +63,14 @@ public class Drink implements Comparable<Drink>{
 
     /**
      * Comparable for sorting
-     * @param other
-     * @return
+     *
+     * @param other compare
+     * @return drink with sorted name
      */
     @Override
     public int compareTo(Drink other) {
         return name.compareTo(other.getName());
     }
-
-
 
 
 }

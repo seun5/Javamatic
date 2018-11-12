@@ -5,14 +5,15 @@
  */
 
 
-public class Ingredient implements Comparable<Ingredient>{
+public class Ingredient implements Comparable<Ingredient> {
     private String name;
-    private double  cost;
+    private double cost;
 
     /**
      * Constructor for the class ingredient
-     * @param name
-     * @param cost
+     *
+     * @param name name of ingredient
+     * @param cost cost of one unit of hte ingredient
      */
     public Ingredient(String name, double cost) {
         this.name = name;
@@ -21,17 +22,19 @@ public class Ingredient implements Comparable<Ingredient>{
 
     /**
      * Return name of the ingredient
+     *
      * @return name of the ingredient
      */
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     /**
      * Return cost of the ingredient
+     *
      * @return cost of the ingredient
      */
-    public double getCost(){
+    public double getCost() {
         return cost;
     }
 
