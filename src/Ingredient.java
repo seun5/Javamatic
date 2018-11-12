@@ -8,13 +8,29 @@
 public class Ingredient implements Comparable<Ingredient>{
     private String name;
     private double  cost;
+
+    /**
+     * Constructor for the class ingredient
+     * @param name
+     * @param cost
+     */
     public Ingredient(String name, double cost) {
         this.name = name;
         this.cost = cost;
     }
+
+    /**
+     * Return name of the ingredient
+     * @return name of the ingredient
+     */
     public String getName(){
         return name;
     }
+
+    /**
+     * Return cost of the ingredient
+     * @return cost of the ingredient
+     */
     public double getCost(){
         return cost;
     }

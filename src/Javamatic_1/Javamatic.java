@@ -7,9 +7,18 @@ import java.util.Scanner;
 
 
 public class Javamatic {
+    /**
+     * Entry point for the program
+     * @param args
+     */
     public static void main(String[] args) {
+        // Set up dispenser through setup method
         Dispenser dispenser = setup();
+
+        // Use scanner to read standard input
         Scanner scanner = new Scanner(System.in);
+
+
         boolean blank_line = false;
         while (true) {
             if (!blank_line)dispenser.printDirectory();
@@ -42,6 +51,10 @@ public class Javamatic {
         }
     }
 
+    /**
+     * Returns a Coffee Dispenser with ingredients and drinks set up
+     * @return Dispenser that is fully
+     */
     private static Dispenser setup() {
         Dispenser dispenser = new Dispenser();
 
