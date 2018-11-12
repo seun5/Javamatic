@@ -10,9 +10,15 @@ public class Javamatic {
     public static void main(String[] args) {
         Dispenser dispenser = setup();
         Scanner scanner = new Scanner(System.in);
+        boolean blank_line = false;
         while (true) {
-            dispenser.printDirectory();
+            if (!blank_line)dispenser.printDirectory();
             String command = scanner.nextLine();
+            if (command.length() == 0) {
+                blank_line = true;
+                continue;
+            }
+            blank_line = false;
             if (command.length() == 1) {
                 char run = command.charAt(0);
                 if (run == 'r' || run == 'R') {
